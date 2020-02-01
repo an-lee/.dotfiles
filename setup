@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# symlink .vimrc
+if [ ! -f ~/.vimrc ]
+then
+  ln -s ~/.dotfiles/.vimrc ~/.vimrc
+fi
+
+# symlink .vim.plugs
+if [ ! -f ~/.vim.plugs ]
+then
+  ln -s ~/.dotfiles/.vim.plugs ~/.vim.plugs
+fi
