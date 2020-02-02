@@ -169,7 +169,7 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 set complete+=kspell
 
 " Always use vertical diffs
-set diffopt+=vertical
+set diffopt=vertical
 
 packloadall                " Load all plugins.
 silent! helptags ALL       " Load help files for all plugins.
