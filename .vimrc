@@ -9,9 +9,19 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vim.plugs"))
-  source ~/.vim.plugs
+set background=dark
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+if filereadable(expand("~/.vimplugs.vimrc"))
+  source ~/.vimplugs.vimrc
+endif
+
+colorscheme jellybeans
 
 filetype plugin indent on  " Enable file type based indentation.
 
@@ -98,7 +108,7 @@ set nojoinspaces
 
 " Make it obvious where 80 characters is
 set textwidth=80
-" set colorcolumn=+1
+set colorcolumn=+1
 
 " Numbers
 set number
@@ -134,6 +144,24 @@ nnoremap <silent> <Leader>s :TestNearest<CR>
 nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
+
+" vim-markdown settings
+" Disable Folding
+let g:vim_markdown_folding_disabled = 1
+" Enable TOC window auto-fit"
+let g:vim_markdown_toc_autofit = 1
+" turn on LaTeX math
+let g:vim_markdown_math = 1
+" Highlight YAML front matter as used by Jekyll or Hugo.
+let g:vim_markdown_frontmatter = 1
+" Strikethrough uses two tildes. ~~Scratch this.~~
+let g:vim_markdown_strikethrough = 1
+" Adjust new list item indent
+let g:vim_markdown_new_list_item_indent = 2
+
+" vim-indent-guide settins
+" have indent guides enabled by default
+let g:indent_guides_enable_on_vim_startup = 1
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<Space>

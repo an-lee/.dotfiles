@@ -6,8 +6,8 @@ then
   ln -s ~/.dotfiles/.vimrc ~/.vimrc
 fi
 
-# symlink .vim.plugs
-if [ ! -f ~/.vim.plugs ]
+# symlink .vimplugs.vimrc
+if [ ! -f ~/.vimplugs.vimrc ]
 then
-  ln -s ~/.dotfiles/.vim.plugs ~/.vim.plugs
+  ln -s ~/.dotfiles/.vimplugs.vimrc ~/.vimplugs.vimrc
 fi
