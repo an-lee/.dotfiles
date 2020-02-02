@@ -11,3 +11,9 @@ if [ ! -f ~/.vimplugs.vimrc ]
 then
   ln -s ~/.dotfiles/.vimplugs.vimrc ~/.vimplugs.vimrc
 fi
+
+# symlink .alias
+if [ ! -f ~/.alias ]
+then
+  ln -s ~/.dotfiles/.alias ~/.alias
+fi

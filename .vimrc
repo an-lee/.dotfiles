@@ -74,21 +74,21 @@ augroup vimrcEx
 augroup END
 
 " ALE linting events
-" augroup ale
-"   autocmd!
-"
-"   if g:has_async
-"     autocmd VimEnter *
-"       \ set updatetime=1000 |
-"       \ let g:ale_lint_on_text_changed = 0
-"     autocmd CursorHold * call ale#Queue(0)
-"     autocmd CursorHoldI * call ale#Queue(0)
-"     autocmd InsertEnter * call ale#Queue(0)
-"     autocmd InsertLeave * call ale#Queue(0)
-"   else
-"     echoerr "require NeoVim or Vim 8"
-"   endif
-" augroup END
+augroup ale
+  autocmd!
+
+  if g:has_async
+    autocmd VimEnter *
+      \ set updatetime=1000 |
+      \ let g:ale_lint_on_text_changed = 0
+    autocmd CursorHold * call ale#Queue(0)
+    autocmd CursorHoldI * call ale#Queue(0)
+    autocmd InsertEnter * call ale#Queue(0)
+    autocmd InsertLeave * call ale#Queue(0)
+  else
+    echoerr "require NeoVim or Vim 8"
+  endif
+augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
@@ -105,6 +105,22 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in fzf for listing files. Lightning fast and respects .gitignore
+  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
+
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
+
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -201,9 +217,3 @@ set diffopt=vertical
 
 packloadall                " Load all plugins.
 silent! helptags ALL       " Load help files for all plugins.
-
-" Fast split navigation with <Ctrl> + hjkl
-noremap <c-h> <c-w><c-h>
-noremap <c-j> <c-w><c-j>
-noremap <c-k> <c-w><c-k>
-noremap <c-l> <c-w><c-l>
