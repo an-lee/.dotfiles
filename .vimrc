@@ -188,6 +188,12 @@ let g:html_indent_tags = 'li\|p'
 " Set tags for vim-fugitive
 set tags^=.git/tags
 
+" Set tags for ctags
+set tags=./tags,tags
+
+" Automotically re-generate ctags each time a file is saved
+autocmd BufWritePost * call system("ctags -R")
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
