@@ -179,6 +179,11 @@ let g:vim_markdown_new_list_item_indent = 2
 " have indent guides enabled by default
 let g:indent_guides_enable_on_vim_startup = 1
 
+" tsuquyomi settings
+" Integrate with syntastic
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<Space>
 

@@ -27,6 +27,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'slim-template/vim-slim'
+Plug 'quramy/tsuquyomi'
 
 " Completion
 Plug 'tpope/vim-endwise'
@@ -34,6 +35,7 @@ Plug 'tpope/vim-endwise'
 " Integration
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
 Plug 'junegunn/gv.vim'
 Plug 'mileszs/ack.vim'
 Plug 'janko-m/vim-test'
@@ -48,6 +50,10 @@ Plug 'tpope/vim-rhubarb'
 " Code display
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nanotech/jellybeans.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Command
 Plug 'tpope/vim-repeat'
