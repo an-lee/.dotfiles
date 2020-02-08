@@ -179,6 +179,15 @@ let g:vim_markdown_new_list_item_indent = 2
 " have indent guides enabled by default
 let g:indent_guides_enable_on_vim_startup = 1
 
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " tsuquyomi settings
 " Integrate with syntastic
 let g:tsuquyomi_disable_quickfix = 1
@@ -197,7 +206,9 @@ set tags^=.git/tags
 set tags=./tags,tags
 
 " Automotically re-generate ctags each time a file is saved
-autocmd BufWritePost * call system("ctags -R")
+" autocmd BufWritePost * call system("ctags -R")
+" map F5 to re-generate ctags manually"
+nnoremap <f5> :!ctags -R<CR>
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
