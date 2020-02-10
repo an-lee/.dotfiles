@@ -13,7 +13,13 @@ then
 fi
 
 # symlink .alias
-if [ ! -f ~/.alias ]
-then
-  ln -s ~/.dotfiles/.alias ~/.alias
-fi
+[ -f ~/.alias ] && rm ~/.alias
+ln -s ~/.dotfiles/.alias ~/.alias
+
+# symlink .ctags
+[ -f ~/.ctags ] && rm ~/.ctags
+ln -s ~/.dotfiles/.ctags ~/.ctags
+
+# symlink .gitigore
+[ -f ~/.gitignore ] && rm ~/.gitignore
+ln -s ~/.dotfiles/.gitignore ~/.gitignore

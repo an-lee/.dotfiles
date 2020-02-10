@@ -17,22 +17,35 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
 
-" Language
+" ==  Language ==
 Plug 'leshill/vim-json'
 Plug 'fatih/vim-go'
 Plug 'vim-ruby/vim-ruby'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
+" Plug 'mxw/vim-jsx'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'slim-template/vim-slim'
-Plug 'quramy/tsuquyomi'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jparise/vim-graphql'
 
-" Completion
+" Typescript related
+
+" Plug 'leafgarland/typescript-vim'
+" Plug 'quramy/tsuquyomi'
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" " For async completion
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
+" " For Denite features
+" Plug 'Shougo/denite.nvim'
+
+" == Completion ==
 Plug 'tpope/vim-endwise'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Integration
+" == Integration ==
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
@@ -47,13 +60,13 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rhubarb'
 
-" Code display
+" == Code display ==
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" Plug 'prettier/vim-prettier', {
+"   \ 'do': 'yarn install',
+"   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Command
 Plug 'tpope/vim-repeat'
