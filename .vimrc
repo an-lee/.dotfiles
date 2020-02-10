@@ -384,3 +384,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+" settings for coc-highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')
