@@ -5,9 +5,9 @@
 [ -f ~/.vimrc ] && rm ~/.vimrc
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
-# symlink .vimplugs.vimrc
-[ -f ~/.vimplugs.vimrc ] && rm ~/.vimplugs.vimrc
-ln -s ~/.dotfiles/.vimplugs.vimrc ~/.vimplugs.vimrc
+# symlink .vimplugs
+[ -f ~/.vimplugs ] && rm ~/.vimplugs
+ln -s ~/.dotfiles/.vimplugs ~/.vimplugs
 
 # clean & install plugins
 vim -c 'PlugClean|PlugInstall|qa'
