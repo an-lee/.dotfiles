@@ -1,2 +1,8 @@
-.DS_Store
+# node
+/node_modules
+
+# ctags
 tags
+
+# Mist
+.DS_Store
