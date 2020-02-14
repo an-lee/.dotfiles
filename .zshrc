@@ -122,7 +122,7 @@ eval "$(rbenv init -)"
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # export PATH="/usr/local/opt/gettext/bin:$PATH"
 
-# yarn 
+# yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # fzf
@@ -130,3 +130,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # ctags
 ctags=/usr/local/bin/ctags
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
