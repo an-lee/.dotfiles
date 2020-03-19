@@ -46,7 +46,7 @@ Plug 'christoomey/vim-run-interactive'
 " == Code display ==
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nanotech/jellybeans.vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 
 " == Command ==
 Plug 'tpope/vim-repeat'
@@ -55,8 +55,8 @@ Plug 'vim-scripts/tComment'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 
-if g:has_async
-  Plug 'dense-analysis/ale'
-endif
+" if g:has_async
+"   Plug 'dense-analysis/ale'
+" endif
 
 call plug#end()

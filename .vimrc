@@ -74,21 +74,21 @@ augroup vimrcEx
 augroup END
 
 " ALE linting events
-augroup ale
-  autocmd!
-
-  if g:has_async
-    autocmd VimEnter *
-      \ set updatetime=1000 |
-      \ let g:ale_lint_on_text_changed = 0
-    autocmd CursorHold * call ale#Queue(0)
-    autocmd CursorHoldI * call ale#Queue(0)
-    autocmd InsertEnter * call ale#Queue(0)
-    autocmd InsertLeave * call ale#Queue(0)
-  else
-    echoerr "require NeoVim or Vim 8"
-  endif
-augroup END
+" augroup ale
+"   autocmd!
+"
+"   if g:has_async
+"     autocmd VimEnter *
+"       \ set updatetime=1000 |
+"       \ let g:ale_lint_on_text_changed = 0
+"     autocmd CursorHold * call ale#Queue(0)
+"     autocmd CursorHoldI * call ale#Queue(0)
+"     autocmd InsertEnter * call ale#Queue(0)
+"     autocmd InsertLeave * call ale#Queue(0)
+"   else
+"     echoerr "require NeoVim or Vim 8"
+"   endif
+" augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
@@ -101,7 +101,7 @@ set shiftround
 set expandtab
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -180,13 +180,13 @@ let g:vim_markdown_new_list_item_indent = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
 " syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " tsuquyomi settings
 " Integrate with syntastic
