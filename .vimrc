@@ -40,11 +40,11 @@ set nomodeline
 set hls           " Enable hightlight search
 
 " Immediately add a closing quote or brace in insert mode.
-" inoremap ' ''<esc>i
-" inoremap " ""<esc>i
-" inoremap ( ()<esc>i
-" inoremap { {}<esc>i
-" inoremap [ []<esc>i
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
 
 " Set up persistent undo across all files.
 set undofile
@@ -72,23 +72,6 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile .vimplugs set filetype=vim
 augroup END
-
-" ALE linting events
-" augroup ale
-"   autocmd!
-"
-"   if g:has_async
-"     autocmd VimEnter *
-"       \ set updatetime=1000 |
-"       \ let g:ale_lint_on_text_changed = 0
-"     autocmd CursorHold * call ale#Queue(0)
-"     autocmd CursorHoldI * call ale#Queue(0)
-"     autocmd InsertEnter * call ale#Queue(0)
-"     autocmd InsertLeave * call ale#Queue(0)
-"   else
-"     echoerr "require NeoVim or Vim 8"
-"   endif
-" augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
@@ -179,25 +162,6 @@ let g:vim_markdown_new_list_item_indent = 2
 " have indent guides enabled by default
 let g:indent_guides_enable_on_vim_startup = 1
 
-" syntastic settings
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
-" tsuquyomi settings
-" Integrate with syntastic
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
-" show tooltips
-" set ballooneval
-" autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-" create es6 import declaration
-" let g:tsuquyomi_shortest_import_path = 1
-
 " deoplete.nvim settings
 let g:deoplete#enable_at_startup = 1
 
@@ -286,11 +250,13 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)

@@ -26,6 +26,7 @@ Plug 'jparise/vim-graphql'
 
 " == Completion ==
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 " == Integration ==
 Plug 'junegunn/fzf.vim'
