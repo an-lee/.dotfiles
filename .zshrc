@@ -135,4 +135,4 @@ ctags=/usr/local/bin/ctags
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # proxy
-export http_proxy="duotai:7R-1LeCT3u@rosewood.h.timonit.cn:21432"
+# export http_proxy="duotai:7R-1LeCT3u@rosewood.h.timonit.cn:21432"

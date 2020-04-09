@@ -39,13 +39,6 @@ set modelines=0   " Disable modelines as a security precaution
 set nomodeline
 set hls           " Enable hightlight search
 
-" Immediately add a closing quote or brace in insert mode.
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
-
 " Set up persistent undo across all files.
 set undofile
 if !isdirectory("$HOME/.vim/undodir")  

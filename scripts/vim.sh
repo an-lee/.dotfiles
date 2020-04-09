@@ -15,8 +15,5 @@ vim -c 'PlugClean|PlugInstall|qa'
 
 # install coc extensions
 vim -c 'CocInstall -sync coc-tsserver coc-json coc-html coc-prettier coc-yaml \
-  coc-solargraph coc-pairs coc-wxml coc-css coc-tslint coc-hightlight coc-angular|q'
-
-# symlink .ctags
-[ -f ~/.ctags ] && rm ~/.ctags
-ln -s ~/.dotfiles/.ctags ~/.ctags
+  coc-solargraph coc-pairs coc-wxml coc-css coc-tslint coc-hightlight \
+  coc-angular coc-pairs|q'
