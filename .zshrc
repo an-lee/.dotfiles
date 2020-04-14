@@ -134,5 +134,6 @@ ctags=/usr/local/bin/ctags
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# proxy
-# export http_proxy="duotai:7R-1LeCT3u@rosewood.h.timonit.cn:21432"
+# Duotai proxy
+alias pon='export http_proxy=http://duotai:7R-1LeCT3u@rosewood.h.timonit.cn:21432;export https_proxy=$http_proxy' 
+alias poff='unset http_proxy;unset https_proxy'
