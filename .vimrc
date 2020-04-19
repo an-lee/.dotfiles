@@ -1,5 +1,7 @@
 set encoding=utf-8
 
+imap <C-L> <Esc>
+
 " Leader
 let mapleader = " "
 
