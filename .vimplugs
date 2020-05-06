@@ -26,7 +26,7 @@ Plug 'jparise/vim-graphql'
 
 " == Completion ==
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 " == Integration ==
 Plug 'junegunn/fzf.vim'
@@ -46,7 +46,8 @@ Plug 'christoomey/vim-run-interactive'
 
 " == Code display ==
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'nanotech/jellybeans.vim'
+" Plug 'nanotech/jellybeans.vim'
+Plug 'bluz71/vim-nightfly-guicolors'
 " Plug 'vim-syntastic/syntastic'
 
 " == Command ==

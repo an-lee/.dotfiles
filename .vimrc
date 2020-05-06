@@ -23,7 +23,8 @@ if filereadable(expand("~/.vimplugs"))
   source ~/.vimplugs
 endif
 
-colorscheme jellybeans
+set termguicolors
+colorscheme nightfly
 
 filetype plugin indent on  " Enable file type based indentation.
 
