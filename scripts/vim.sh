@@ -11,9 +11,9 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.vimplugs ~/.vimplugs
 
 # clean & install plugins
-vim -c 'PlugClean|PlugInstall|qa'
+vim -c 'PlugUpgrade|PlugClean|PlugInstall|PlugUpdate|qa'
 
 # install coc extensions
 vim -c 'CocInstall -sync coc-tsserver coc-json coc-html coc-prettier coc-yaml \
-  coc-solargraph coc-pairs coc-wxml coc-css coc-tslint coc-hightlight \
-  coc-angular coc-pairs|q'
+  coc-solargraph coc-pairs coc-wxml coc-css coc-tslint coc-highlight \
+  coc-angular|q'
