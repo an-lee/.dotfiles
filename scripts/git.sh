@@ -4,7 +4,7 @@
 # symlink .gitigore
 [ -f ~/.gitignore ] && rm ~/.gitignore
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
-# git config
-git config --global core.excludesfile '~/.gitignore'
+# symlink .gitconfig
+[ -f ~/.gitconfig ] && rm ~/.gitconfig
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
