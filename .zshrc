@@ -68,7 +68,6 @@ plugins=(
   github
   rails
   ruby
-  autojump
   lighthouse
   aterminal
   osx
@@ -116,8 +115,7 @@ export EDITOR=vim
 [[ -f ~/.alias ]] && source ~/.alias
 
 # init rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+[[ -x rbenv ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # export PATH="/usr/local/opt/gettext/bin:$PATH"
