@@ -10,7 +10,7 @@
 	br = branch
 	st = status
 	l = log --graph
-# [http "https://github.com"]
-# 	proxy = socks5://127.0.0.1:1086
-# [https "https://github.com"]
-# 	proxy = socks5://127.0.0.1:1086
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:6152
+[https "https://github.com"]
+	proxy = socks5://127.0.0.1:6152
