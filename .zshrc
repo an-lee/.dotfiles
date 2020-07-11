@@ -115,7 +115,7 @@ export EDITOR=vim
 [[ -f ~/.alias ]] && source ~/.alias
 
 # init rbenv
-[[ -x $(where rbenv) ]] && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
+([[ -x /usr/local/bin/rbenv ]] || [[ -x /usr/bin/rbenv ]]) && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # export PATH="/usr/local/opt/gettext/bin:$PATH"
