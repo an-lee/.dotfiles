@@ -132,10 +132,6 @@ ctags=/usr/local/bin/ctags
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Duotai proxy
-alias pon='export http_proxy=http://duotai:7R-1LeCT3u@rosewood.h.timonit.cn:21432;export https_proxy=$http_proxy' 
-alias poff='unset http_proxy;unset https_proxy'
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
