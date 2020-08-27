@@ -3,7 +3,7 @@ alias ll="ls -al"
 alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
-# alias xcode-reinstall="sudo rum -rf $(xcode-select -print-path) && rm -rf /Library/Developer/CommandLineTools && xcode-select --install"
+# alias xcode-reinstall="sudo rm -rf $(xcode-select -print-path) && rm -rf /Library/Developer/CommandLineTools && xcode-select --install"
 alias myip="curl cip.cc"
 # Duotai proxy
 alias pon='set http_proxy=http://127.0.0.1:6152 && set https_proxy=http://127.0.0.1:6152 && set all_proxy=socks5://127.0.0.1:6153' 

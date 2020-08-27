@@ -24,6 +24,7 @@ Plug 'slim-template/vim-slim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'martinda/jenkinsfile-vim-syntax'
+Plug 'towolf/vim-helm'
 
 " == Completion ==
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
