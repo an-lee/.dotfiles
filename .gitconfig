@@ -10,7 +10,3 @@
 	br = branch
 	st = status
 	l = log --graph
-[http "https://github.com"]
-	proxy = http://127.0.0.1:6152
-[https "https://github.com"]
-	proxy = https://127.0.0.1:6152
