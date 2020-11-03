@@ -3,8 +3,16 @@ alias ll="ls -al"
 alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
+
 # alias xcode-reinstall="sudo rm -rf $(xcode-select -print-path) && rm -rf /Library/Developer/CommandLineTools && xcode-select --install"
+
 alias myip="curl cip.cc"
-# Duotai proxy
+
+# proxy
 alias pon='set http_proxy=http://127.0.0.1:6152 && set https_proxy=http://127.0.0.1:6152 && set all_proxy=socks5://127.0.0.1:6153' 
 alias poff='unset http_proxy;unset https_proxy;unset all_proxy;'
+
+# optimize images
+# depend on optipng and jpegoptim
+# install: brew install optipng jpegoptim
+alias optimg="find . -iname '*.png' -print0 | xargs -0 -n 1 -P 4 optipng -o7 -strip all;find . -iregex '.*\.\(jpg\|jpeg\|jpe\|jif|jfif|jfi\)$' -print0 | xargs -0 -n 1 -P 4 jpegoptim --all-progressive --strip-all --strip-com --strip-exif --strip-iptc --strip-icc"
