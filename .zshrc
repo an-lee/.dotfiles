@@ -63,6 +63,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ag
   git
   git-flow
   github
@@ -70,7 +71,6 @@ plugins=(
   ruby
   lighthouse
   aterminal
-  osx
   npm
   node
   zsh-completions
@@ -115,10 +115,8 @@ export EDITOR=vim
 [[ -f ~/.alias ]] && source ~/.alias
 
 # init rbenv
-([[ -x /usr/local/bin/rbenv ]] || [[ -x /usr/bin/rbenv ]]) && export PATH="$HOME/.rbenv/bin:$PATH" && eval "$(rbenv init -)"
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-# export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -136,4 +134,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153;
+export PATH=$PATH:/usr/local/go/bin
