@@ -16,7 +16,7 @@ endif
 
 " ==  Language ==
 Plug 'leshill/vim-json'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -25,10 +25,12 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'martinda/jenkinsfile-vim-syntax'
 Plug 'towolf/vim-helm'
+Plug 'tomlion/vim-solidity'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " == Completion ==
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 " == Integration ==
 Plug 'junegunn/fzf.vim'

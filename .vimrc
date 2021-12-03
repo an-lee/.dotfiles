@@ -2,6 +2,9 @@ set encoding=utf-8
 
 imap <C-L> <Esc>
 
+" fold method
+set foldmethod=indent
+
 " Leader
 let mapleader = " "
 
@@ -67,6 +70,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile gitconfig.local set filetype=gitconfig
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile .vimplugs set filetype=vim
+  autocmd BufRead * normal zR
 augroup END
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
@@ -102,8 +106,8 @@ if executable('ag')
 endif
 
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+" set colorcolumn=+1
 
 " Numbers
 set number
@@ -176,7 +180,7 @@ set tags=./tags,tags
 " Automotically re-generate ctags each time a file is saved
 " autocmd BufWritePost * call system("ctags -R")
 " map F5 to re-generate ctags manually"
-nnoremap <f5> :!ctags -R<CR>
+" nnoremap <f5> :!ctags -R<CR>
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
