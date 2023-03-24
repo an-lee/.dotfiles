@@ -164,6 +164,6 @@ export PNPM_HOME="/home/an-lee/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY=""
 export FLYCTL_INSTALL="/home/an-lee/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
