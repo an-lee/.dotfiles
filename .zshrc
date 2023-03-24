@@ -134,7 +134,36 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# export GOROOT=/usr/local/go
-# export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
 # export GOBIN=$GOPATH/bin
+export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin
+
+export PATH="$PATH:/home/an-lee/flutter/bin"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/an-lee/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/an-lee/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/an-lee/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/an-lee/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# pnpm
+export PNPM_HOME="/home/an-lee/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export OPENAI_API_KEY="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"
+export FLYCTL_INSTALL="/home/an-lee/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"

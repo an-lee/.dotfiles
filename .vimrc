@@ -14,8 +14,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-set background=dark
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -26,8 +24,25 @@ if filereadable(expand("~/.vimplugs"))
   source ~/.vimplugs
 endif
 
-set termguicolors
-colorscheme nightfly
+if has('+termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+set t_Co=256
+colorscheme PaperColor
+let g:lightline = { 'colorscheme': 'PaperColor' }
+let g:lightline = { 'colorscheme': 'PaperColor' }
+
+" " The configuration options should be placed before `colorscheme sonokai`.
+" " Available values: `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'`
+" let g:sonokai_style = 'shusia'
+" let g:sonokai_enable_italic = 1
+" " let g:sonokai_disable_italic_comment = 1
+" let g:sonokai_transparent_background = 1
+" let g:airline_theme = 'sonokai'
+" let g:sonokai_current_word = 'bold'
+" colorscheme sonokai
 
 filetype plugin indent on  " Enable file type based indentation.
 
@@ -70,6 +85,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile gitconfig.local set filetype=gitconfig
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile .vimplugs set filetype=vim
+  autocmd BufRead,BufNewFile .turbo_stream set filetype=html
   autocmd BufRead * normal zR
 augroup END
 
@@ -132,10 +148,10 @@ inoremap <S-Tab> <C-n>
 nnoremap <Leader><Leader> <C-^>
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+" nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
@@ -278,9 +294,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)

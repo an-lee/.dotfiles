@@ -27,10 +27,13 @@ Plug 'martinda/jenkinsfile-vim-syntax'
 Plug 'towolf/vim-helm'
 Plug 'tomlion/vim-solidity'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'pantharshit00/vim-prisma'
+Plug 'dart-lang/dart-vim-plugin'
 
 " == Completion ==
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'github/copilot.vim'
 
 " == Integration ==
 Plug 'junegunn/fzf.vim'
@@ -52,8 +55,11 @@ Plug 'wakatime/vim-wakatime'
 " == Code display ==
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'nanotech/jellybeans.vim'
-Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'sainnhe/sonokai'
 " Plug 'vim-syntastic/syntastic'
+Plug 'sheerun/vim-polyglot'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-airline/vim-airline-themes'
 
 " == Command ==
 Plug 'tpope/vim-repeat'
