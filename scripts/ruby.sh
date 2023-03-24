@@ -23,10 +23,10 @@ echo 'using rbenv-doctor...'
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
 # install ruby
-rbenv install 3.0.2
+rbenv install 3.2.0
 
 # set 2.7.0 as global version
-rbenv global 3.0.2
+rbenv global 3.2.0
 
 # upgrade
 gem update --system
